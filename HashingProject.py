@@ -56,4 +56,3 @@ if secure_password == secure_password_validated:
     print ("That is the correct password.")
 else:
     print ("That is the incorrect password.")
-print(f"Generated Secure Password: {secure_password}\n")
