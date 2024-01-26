@@ -36,6 +36,19 @@ def generate_secure_password(password, salt):
     
     return encoded_secure_password
 
+def password_validator(password, salt):
+	secure_password_validated = generate_secure_password(password, salt)
+	if secure_password == secure_password_validated:
+		print ("That is the correct password.")
+	else:
+		print ("That is the incorrect password.")
+	
+def hash_main(password):
+	length_of_salt = 16
+	generated_salt = get_salt(length_of_salt)
+	secure_password = generate_secure_password(password, generated_salt)
+	print("Hashed password has been generated.")
+
 # Example usage:
 length_of_salt = 16
 password = input("What is your password? ")
