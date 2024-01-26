@@ -7,8 +7,6 @@ from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.asymmetric import padding
 
-global_salt = ""
-
 def get_salt(length):
     alphabet = string.ascii_letters + string.digits
     return ''.join(random.choice(alphabet) for _ in range(length))
